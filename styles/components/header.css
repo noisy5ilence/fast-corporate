@@ -1,0 +1,33 @@
+.header {
+  background: var(--header-background-color);
+  padding-block: 11px 8px;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.header__separator {
+  width: 1px;
+  height: 30px;
+  display: flex;
+  margin-right: 12px;
+  margin-left: 9px;
+  background: var(--alt-color);
+}
+
+.category {
+  font-weight: 500;
+  color: #FFB800;
+  text-transform: uppercase;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--alt-color);
+  font-weight: 500;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+}

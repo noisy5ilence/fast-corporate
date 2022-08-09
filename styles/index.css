@@ -1,0 +1,56 @@
+@import "./utils/index.css";
+@import "./components/index.css";
+
+body {
+  font-family: var(--primary-font-family), sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1164px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main__heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: var(--primary-color);
+  font-family: var(--secondary-font-family);
+  text-align: center;
+  padding: 0 12px;
+  margin-bottom: 46px;
+  margin-top: 141px;
+}
+
+.main__products {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.main__products__product {
+  flex-basis: 360px;
+  flex-grow: 1;
+}

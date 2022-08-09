@@ -1,0 +1,232 @@
+.product {
+  position: relative;
+  background: #F3F5F6;
+  isolation: isolate;
+  padding-bottom: 26px;
+}
+
+.product::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  pointer-events: none;
+  background: var(--alt-color);
+}
+
+.product__price {
+  position: relative;
+  background: var(--alt-color);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding-block: 30px 22px;
+  max-width: 240px;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.product__price__wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.product__price__value {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  font-family: var(--secondary-font-family);
+}
+
+.product__price__per {
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+}
+
+.product__price__full {
+  text-align: center;
+  text-decoration-line: line-through;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--secondary-color);
+  position: relative;
+  top: -6px;
+}
+
+.product__price__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  background: var(--label-background-color);
+  color: var(--label-color);
+  text-transform: capitalize;
+}
+
+.product__price__discount {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+}
+
+.product__name {
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto 32px;
+}
+
+.product__title {
+  font-weight: 400;
+}
+
+.product__period {
+  font-weight: 700;
+}
+
+.product__download {
+  border: none;
+  position: relative;
+  padding: 10px 10px 10px 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background: linear-gradient(0deg, #130999 -0.01%, #174D8F 35.01%, #1A7F87 64.91%, #1C9E83 87.44%, #1DAA81 99.99%);
+  transition: box-shadow 200ms ease;
+  margin: 0 auto;
+}
+
+.product__download:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product__download__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 18px;
+}
+
+.product__download a {
+  color: var(--alt-color);
+}
+
+.product__download a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product__arrow {
+  position: fixed;
+  z-index: 1;
+  background: #3683F7;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  color: var(--alt-color);
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.product__arrow_bottom {
+  padding-top: 44px;
+  bottom: 122px;
+  left: 12px;
+  animation: fadeDown ease-in 300ms;
+}
+
+.product__arrow_top {
+  top: 101px;
+  right: 12px;
+  padding-bottom: 30px;
+  animation: fadeUp ease-in 300ms;
+}
+
+.product__arrow__primary {
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 72px;
+  font-family: var(--secondary-font-family);
+  order: 1;
+}
+
+.product__arrow__secondary {
+  position: relative;
+  top: -7px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  order: 2;
+}
+
+.product__arrow_top .product__arrow__primary {
+  margin-top: 11px;
+}
+
+.product__arrow_bottom::before,
+.product__arrow_top::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.product__arrow_bottom::before {
+  top: 100%;
+  border-width: 52px 80px 0 80px;
+  border-color: #3683F7 transparent transparent transparent;
+}
+
+.product__arrow_top::after {
+  top: -52px;
+  border-width: 0 80px 52px 80px;
+  border-color: transparent transparent #3683F7 transparent;
+}

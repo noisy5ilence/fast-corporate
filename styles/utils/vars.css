@@ -1,0 +1,12 @@
+:root {
+  --primary-font-family: 'Roboto';
+  --secondary-font-family: 'Bebas Neue';
+
+  --primary-color: #000000;
+  --secondary-color: #929292;
+  --alt-color: #FFFFFF;
+  --header-background-color: #000000;
+  --footer-background-color: #000000;
+  --label-background-color: #FFB800;
+  --label-color: #2B2929;
+}

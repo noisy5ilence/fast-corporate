@@ -1,0 +1,18 @@
+.footer {
+  background: var(--footer-background-color);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  padding-block: 8px 10px;
+}
+
+.footer .container {
+  flex-direction: column;
+}
+
+.copyright {
+  color: var(--alt-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+}
