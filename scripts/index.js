@@ -1,5 +1,5 @@
 (function () {
-  const SERVER_URL = 'https://cors-anywhere.herokuapp.com/https://veryfast.io';
+  const SERVER_URL = 'https://fast-dawn-89938.herokuapp.com/https://veryfast.io';
 
   const fetchData = query => {
     return fetch(`${ SERVER_URL }${ query }`)
